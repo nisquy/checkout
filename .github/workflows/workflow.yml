@@ -1,0 +1,16 @@
+on:
+  push:
+    branches: [default, develop]
+defaults:
+  run:
+    shell: bash
+jobs:
+  checkout:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - run: cargo install --git=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY --rev=$GITHUB_SHA
+    - run: checkout

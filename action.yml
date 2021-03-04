@@ -1,0 +1,7 @@
+name: 'checkout'
+description: 'Checkout Git Repository'
+runs:
+  using: "composite"
+  steps:
+  - run: cargo run --quiet --release --manifest-path=$GITHUB_ACTION_PATH/Cargo.toml
+    shell: bash
