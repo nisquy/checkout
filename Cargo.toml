@@ -1,6 +1,6 @@
 [package]
 name = "checkout"
-version = "0.0.0"
+version = "0.0.1"
 authors = ["Logan SQUIREL <logan.squirel@protonmail.com>"]
 edition = "2018"
 
